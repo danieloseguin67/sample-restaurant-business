@@ -1,0 +1,183 @@
+<div class="container menu-centered">
+  <h1>{{ 'MENU.TITLE' | translate }}</h1>
+  <p class="subtitle">{{ 'MENU.SUBTITLE' | translate }}</p>
+  
+  <div class="tabs">
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'starters'"
+      (click)="setActiveTab('starters')">
+      {{ 'MENU.STARTERS' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'mains'"
+      (click)="setActiveTab('mains')">
+      {{ 'MENU.MAINS' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'burgers'"
+      (click)="setActiveTab('burgers')">
+      {{ 'MENU.BURGERS' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'desserts'"
+      (click)="setActiveTab('desserts')">
+      {{ 'MENU.DESSERTS' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'beverages'"
+      (click)="setActiveTab('beverages')">
+      {{ 'MENU.BEVERAGES' | translate }}
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <section class="menu-section" *ngIf="activeTab === 'starters'">
+      <h2>🥗 {{ 'MENU.STARTERS' | translate }}</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.BRUSCHETTA' | translate }}</h3>
+            <span class="price">{{ 'MENU.BRUSCHETTA_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.BRUSCHETTA_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.MUSHROOM_SOUP' | translate }}</h3>
+            <span class="price">{{ 'MENU.MUSHROOM_SOUP_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.MUSHROOM_SOUP_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.CAESAR_SALAD' | translate }}</h3>
+            <span class="price">{{ 'MENU.CAESAR_SALAD_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.CAESAR_SALAD_DESC' | translate }}</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="menu-section" *ngIf="activeTab === 'mains'">
+      <h2>🍝 {{ 'MENU.MAINS' | translate }}</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.SALMON' | translate }}</h3>
+            <span class="price">{{ 'MENU.SALMON_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.SALMON_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.CARBONARA' | translate }}</h3>
+            <span class="price">{{ 'MENU.CARBONARA_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.CARBONARA_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.THAI_CURRY' | translate }}</h3>
+            <span class="price">{{ 'MENU.THAI_CURRY_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.THAI_CURRY_DESC' | translate }}</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="menu-section" *ngIf="activeTab === 'burgers'">
+      <h2>🍔 {{ 'MENU.BURGERS' | translate }}</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.CHEESEBURGER' | translate }}</h3>
+            <span class="price">{{ 'MENU.CHEESEBURGER_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.CHEESEBURGER_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.CHICKEN_CLUB' | translate }}</h3>
+            <span class="price">{{ 'MENU.CHICKEN_CLUB_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.CHICKEN_CLUB_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.VEGGIE_BURGER' | translate }}</h3>
+            <span class="price">{{ 'MENU.VEGGIE_BURGER_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.VEGGIE_BURGER_DESC' | translate }}</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="menu-section" *ngIf="activeTab === 'desserts'">
+      <h2>🍰 {{ 'MENU.DESSERTS' | translate }}</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.TIRAMISU' | translate }}</h3>
+            <span class="price">{{ 'MENU.TIRAMISU_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.TIRAMISU_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.CHOCOLATE_CAKE' | translate }}</h3>
+            <span class="price">{{ 'MENU.CHOCOLATE_CAKE_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.CHOCOLATE_CAKE_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.LEMON_TART' | translate }}</h3>
+            <span class="price">{{ 'MENU.LEMON_TART_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.LEMON_TART_DESC' | translate }}</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="menu-section" *ngIf="activeTab === 'beverages'">
+      <h2>🍷 {{ 'MENU.BEVERAGES' | translate }}</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.WINE' | translate }}</h3>
+            <span class="price">{{ 'MENU.WINE_PRICE' | translate }}</span>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.BEER' | translate }}</h3>
+            <span class="price">{{ 'MENU.BEER_PRICE' | translate }}</span>
+          </div>
+          <p>{{ 'MENU.BEER_DESC' | translate }}</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.COFFEE' | translate }}</h3>
+            <span class="price">{{ 'MENU.COFFEE_PRICE' | translate }}</span>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h3>{{ 'MENU.JUICE' | translate }}</h3>
+            <span class="price">{{ 'MENU.JUICE_PRICE' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <section class="dietary-info">
+    <h3>🧑‍🍳 {{ 'MENU.DIETARY_INFO' | translate }}</h3>
+    <p>{{ 'MENU.DIETARY_DESC' | translate }}</p>
+  </section>
+</div>

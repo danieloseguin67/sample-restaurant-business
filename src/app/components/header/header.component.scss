@@ -1,0 +1,222 @@
+header {
+  background-color: #800020;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Burger Menu Button */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  &.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Desktop Navigation */
+nav {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  white-space: nowrap;
+  
+  &:hover {
+    color: #f4e4d7;
+  }
+  
+  &.active {
+    color: #f4e4d7;
+    font-weight: bold;
+  }
+}
+
+/* Mobile Language Switcher (hidden on desktop) */
+.mobile-language-switcher {
+  display: none;
+}
+
+/* Desktop Language Switcher */
+.desktop-language-switcher {
+  display: block;
+}
+
+/* Overlay for mobile menu */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    gap: 1rem;
+  }
+
+  nav {
+    gap: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet and Mobile Styles (below 768px) */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    order: 3;
+  }
+
+  .logo {
+    order: 1;
+    flex: 1;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .desktop-language-switcher {
+    display: none;
+  }
+
+  .mobile-language-switcher {
+    display: block;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 1rem;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: #800020;
+    flex-direction: column;
+    gap: 0;
+    padding: 5rem 0 2rem 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
+    align-items: stretch;
+
+    &.open {
+      right: 0;
+    }
+
+    a {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: normal;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}
+
+/* Mobile Styles (below 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  nav {
+    width: 260px;
+    right: -260px;
+
+    a {
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+

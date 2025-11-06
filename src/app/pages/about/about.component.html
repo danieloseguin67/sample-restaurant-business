@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>{{ 'ABOUT.TITLE' | translate }}</h1>
+  
+  <div class="tabs">
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'story'"
+      (click)="setActiveTab('story')">
+      {{ 'ABOUT.STORY_TITLE' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'mission'"
+      (click)="setActiveTab('mission')">
+      {{ 'ABOUT.MISSION_TITLE' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'chef'"
+      (click)="setActiveTab('chef')">
+      {{ 'ABOUT.CHEF_TITLE' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'awards'"
+      (click)="setActiveTab('awards')">
+      {{ 'ABOUT.AWARDS_TITLE' | translate }}
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <section class="about-section about-box" *ngIf="activeTab === 'story'">
+      <h2>{{ 'ABOUT.STORY_TITLE' | translate }}</h2>
+      <p>{{ 'ABOUT.STORY_TEXT' | translate }}</p>
+    </section>
+    
+    <section class="about-section about-box" *ngIf="activeTab === 'mission'">
+      <h2>{{ 'ABOUT.MISSION_TITLE' | translate }}</h2>
+      <p>{{ 'ABOUT.MISSION_TEXT' | translate }}</p>
+    </section>
+    
+    <section class="about-section about-box" *ngIf="activeTab === 'chef'">
+      <h2>{{ 'ABOUT.CHEF_TITLE' | translate }}</h2>
+      <h3>{{ 'ABOUT.CHEF_NAME' | translate }}</h3>
+      <p>{{ 'ABOUT.CHEF_BIO' | translate }}</p>
+    </section>
+    
+    <section class="about-section about-box" *ngIf="activeTab === 'awards'">
+      <h2>{{ 'ABOUT.AWARDS_TITLE' | translate }}</h2>
+      <ul class="awards-list">
+        <li>{{ 'ABOUT.AWARD1' | translate }}</li>
+        <li>{{ 'ABOUT.AWARD2' | translate }}</li>
+        <li>{{ 'ABOUT.AWARD3' | translate }}</li>
+      </ul>
+    </section>
+  </div>
+</div>

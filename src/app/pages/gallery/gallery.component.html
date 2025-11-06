@@ -1,0 +1,102 @@
+<div class="container">
+  <h1>{{ 'GALLERY.TITLE' | translate }}</h1>
+  <p class="subtitle">{{ 'GALLERY.SUBTITLE' | translate }}</p>
+  
+  <div class="tabs">
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'food'"
+      (click)="setActiveTab('food')">
+      {{ 'GALLERY.FOOD_TAB' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'ambiance'"
+      (click)="setActiveTab('ambiance')">
+      {{ 'GALLERY.AMBIANCE_TAB' | translate }}
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'events'"
+      (click)="setActiveTab('events')">
+      {{ 'GALLERY.EVENTS_TAB' | translate }}
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <section class="gallery-section" *ngIf="activeTab === 'food'">
+      <h2>{{ 'GALLERY.FOOD_TAB' | translate }}</h2>
+      <p>{{ 'GALLERY.FOOD_DESC' | translate }}</p>
+      <div class="image-grid">
+        <div class="image-placeholder">
+          <span>Food Image 1</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Food Image 2</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Food Image 3</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Food Image 4</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Food Image 5</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Food Image 6</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="gallery-section" *ngIf="activeTab === 'ambiance'">
+      <h2>{{ 'GALLERY.AMBIANCE_TAB' | translate }}</h2>
+      <p>{{ 'GALLERY.AMBIANCE_DESC' | translate }}</p>
+      <div class="image-grid">
+        <div class="image-placeholder">
+          <span>Ambiance Image 1</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Ambiance Image 2</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Ambiance Image 3</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Ambiance Image 4</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Ambiance Image 5</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Ambiance Image 6</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="gallery-section" *ngIf="activeTab === 'events'">
+      <h2>{{ 'GALLERY.EVENTS_TAB' | translate }}</h2>
+      <p>{{ 'GALLERY.EVENTS_DESC' | translate }}</p>
+      <div class="image-grid">
+        <div class="image-placeholder">
+          <span>Event Image 1</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Event Image 2</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Event Image 3</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Event Image 4</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Event Image 5</span>
+        </div>
+        <div class="image-placeholder">
+          <span>Event Image 6</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

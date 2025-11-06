@@ -1,0 +1,72 @@
+<div class="container centered-content">
+  <h1>{{ 'RESERVATIONS.TITLE' | translate }}</h1>
+  <p class="subtitle">{{ 'RESERVATIONS.SUBTITLE' | translate }}</p>
+  
+  <section class="reservation-form">
+    <form>
+      <div class="form-group">
+        <label>{{ 'RESERVATIONS.FORM_NAME' | translate }}</label>
+        <input type="text" placeholder="{{ 'RESERVATIONS.FORM_NAME' | translate }}">
+      </div>
+      
+      <div class="form-group">
+        <label>{{ 'RESERVATIONS.FORM_EMAIL' | translate }}</label>
+        <input type="email" placeholder="{{ 'RESERVATIONS.FORM_EMAIL' | translate }}">
+      </div>
+      
+      <div class="form-group">
+        <label>{{ 'RESERVATIONS.FORM_PHONE' | translate }}</label>
+        <input type="tel" placeholder="{{ 'RESERVATIONS.FORM_PHONE' | translate }}">
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label>{{ 'RESERVATIONS.FORM_DATE' | translate }}</label>
+          <input type="date">
+        </div>
+        
+        <div class="form-group">
+          <label>{{ 'RESERVATIONS.FORM_TIME' | translate }}</label>
+          <input type="time">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label>{{ 'RESERVATIONS.FORM_GUESTS' | translate }}</label>
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8+</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>{{ 'RESERVATIONS.FORM_SPECIAL' | translate }}</label>
+        <textarea rows="4" placeholder="{{ 'RESERVATIONS.FORM_SPECIAL' | translate }}"></textarea>
+      </div>
+      
+      <button type="submit" class="btn-primary">{{ 'RESERVATIONS.FORM_SUBMIT' | translate }}</button>
+    </form>
+  </section>
+  
+  <section class="reservation-info">
+    <div class="info-box">
+      <h3>{{ 'RESERVATIONS.WALK_IN_TITLE' | translate }}</h3>
+      <p>{{ 'RESERVATIONS.WALK_IN_TEXT' | translate }}</p>
+    </div>
+    
+    <div class="info-box">
+      <h3>{{ 'RESERVATIONS.GROUP_TITLE' | translate }}</h3>
+      <p>{{ 'RESERVATIONS.GROUP_TEXT' | translate }}</p>
+    </div>
+    
+    <div class="contact-info">
+      <p><strong>{{ 'RESERVATIONS.CONTACT_INFO' | translate }}</strong></p>
+    </div>
+  </section>
+</div>

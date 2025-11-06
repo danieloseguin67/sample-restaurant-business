@@ -1,0 +1,45 @@
+<div class="container">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>{{ 'HOME.TITLE' | translate }}</h1>
+        <p>{{ 'HOME.SUBTITLE' | translate }}</p>
+      </div>
+      <div class="image-placeholder-right">
+        <div class="image-box">
+          <span>Restaurant Image</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="featured-dishes">
+    <h2>{{ 'HOME.FEATURED_DISHES' | translate }}</h2>
+    <div class="dishes-grid">
+      <div class="dish-card">
+        <h3>{{ 'HOME.DISH1_NAME' | translate }}</h3>
+        <p>{{ 'HOME.DISH1_DESC' | translate }}</p>
+        <span class="price">{{ 'HOME.DISH1_PRICE' | translate }}</span>
+      </div>
+      <div class="dish-card">
+        <h3>{{ 'HOME.DISH2_NAME' | translate }}</h3>
+        <p>{{ 'HOME.DISH2_DESC' | translate }}</p>
+        <span class="price">{{ 'HOME.DISH2_PRICE' | translate }}</span>
+      </div>
+      <div class="dish-card">
+        <h3>{{ 'HOME.DISH3_NAME' | translate }}</h3>
+        <p>{{ 'HOME.DISH3_DESC' | translate }}</p>
+        <span class="price">{{ 'HOME.DISH3_PRICE' | translate }}</span>
+      </div>
+    </div>
+    <div class="cta">
+      <a routerLink="/menu" class="btn-primary">{{ 'HOME.CTA' | translate }}</a>
+    </div>
+  </section>
+  
+  <section class="hours">
+    <h2>{{ 'HOME.HOURS_TITLE' | translate }}</h2>
+    <p>{{ 'HOME.HOURS_MON_FRI' | translate }}</p>
+    <p>{{ 'HOME.HOURS_SAT_SUN' | translate }}</p>
+  </section>
+</div>
