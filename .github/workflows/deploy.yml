@@ -35,7 +35,9 @@ jobs:
         run: npm run build -- --base-href=/
 
       - name: Create CNAME file
-        run: echo "restaurantsample.seguin.dev" > ./dist/sample-restaurant-business/browser/CNAME
+        run: |
+          mkdir -p ./dist/sample-restaurant-business/browser
+          echo "restaurantsample.seguin.dev" > ./dist/sample-restaurant-business/browser/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
