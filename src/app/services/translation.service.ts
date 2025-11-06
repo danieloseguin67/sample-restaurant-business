@@ -29,13 +29,13 @@ export class TranslationService {
     try {
       for (const lang of langs) {
         const translations = await firstValueFrom(
-          this.http.get<Translations>(`/assets/i18n/${lang}.json`)
+          this.http.get<Translations>(`assets/i18n/${lang}.json`)
         );
         this.translations[lang] = translations;
       }
       this.translationsLoaded.next(true);
     } catch (error) {
-      console.error(`Failed to load translations from /assets/i18n/ directory:`, error);
+      console.error(`Failed to load translations from assets/i18n/ directory:`, error);
       console.error('Please ensure translation JSON files exist in the assets/i18n folder.');
       // Set a flag to indicate translations failed to load
       this.translationsLoaded.next(false);
