@@ -36,13 +36,13 @@ jobs:
 
       - name: Create CNAME file
         run: |
-          mkdir -p ./dist/sample-restaurant-business/browser
-          echo "restaurantsample.seguin.dev" > ./dist/sample-restaurant-business/browser/CNAME
+          mkdir -p ./dist/restaurant-business/browser
+          echo "restaurantsample.seguin.dev" > ./dist/restaurant-business/browser/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/sample-restaurant-business/browser
+          path: ./dist/restaurant-business/browser
 
   deploy:
     environment:
